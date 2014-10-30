@@ -1,7 +1,7 @@
 % This MATLAB script generates a Monte Carlo mutual information estimate
 % for every point on a 2-d grid representing values of r and s.
 % 
-% The default input process parameters will produce an 80x80 matrix of 
+% The default input process parameters will produce an 79x79 matrix of 
 % mutual information estimates, where the (i,j)th entry corresponds
 % to input process transition probabilities r = i/80 and s = j/80.
 % The default quality parameters give a HIGH QUALITY estimate of 
