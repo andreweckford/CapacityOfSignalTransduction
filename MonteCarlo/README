@@ -1,3 +1,5 @@
-To run this software, execute the miScr.m script.
+To run this software, execute the miScr.m script in MATLAB.
 
 Parameters can be set by editing miScr.m
+
+Author: Andrew Eckford, aeckford@yorku.ca
