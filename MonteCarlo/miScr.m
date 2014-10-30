@@ -1,21 +1,34 @@
-clear
-
-% This MATLAB script generates mutual information for every point on a
-% 2-d grid representing values of r and s.
+% This MATLAB script generates a Monte Carlo mutual information estimate
+% for every point on a 2-d grid representing values of r and s.
 % 
+% The default input process parameters will produce an 80x80 matrix of 
+% mutual information estimates, where the (i,j)th entry corresponds
+% to input process transition probabilities r = i/80 and s = j/80.
+% The default quality parameters give a HIGH QUALITY estimate of 
+% mutual information, though with VERY LONG running time (several days).
+%
 % At the end of this routine, the resulting matrix is stored in the
 % variable z -- see below
 %
 % Written by Andrew W. Eckford, aeckford@yorku.ca
 
+clear
+
 %%%%% Parameters
 
-% Model parameters
-alphaL = 0.1; % binding probability at low concentration
-alphaH = 0.5; % binding probability at high concentration
-beta = 0.2; % unbinding probability
+%% Model parameters
+%
+% binding probability at low concentration
+alphaL = 0.1; 
 
-% Input process parameters
+% binding probability at high concentration
+alphaH = 0.5; 
+
+% unbinding probability
+beta = 0.2;
+
+%% Input process parameters
+%
 % r and s are the transition probabilities for the input process
 % num contains the number of points per dimension in the 2-dimensional
 % grid representing r and s
@@ -27,6 +40,8 @@ num = 79;
 % moreover, step should NOT be greater than 1/(num+1)
 step = 1/80; 
 
+%% Quality parameters -- increase for higher quality (but longer run time)
+%
 % length of the vector of channel uses used in each iteration of Monte Carlo
 mcLength = 10000;
 
